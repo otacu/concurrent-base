@@ -1,0 +1,21 @@
+总结：
+map/set选择：
+// 非并发
+hashMap/TreeMap/LinkedHashMap
+// 并发不高
+Collections.synchronizedMap/HashTable
+// 并发高
+ConcurrentHashMap/ConcurrentSkipListMap(有序) ->ConcurrentHashSet
+
+队列
+ArrayList/LinkedList // 非同步
+Collections.synchronizedMap/Vector // 同步，并发不高
+CopyOnWriteList // 读多写少
+queue
+   ConcurrentLinkedQueue  高并发内部加锁队列
+   BlockingQueue  阻塞式队列
+         LinkedBQ 无界
+         ArrayBQ  有界
+   DelayQueue 执行定时任务队列
+   TransferQueue 实时转移
+   SynchronousQueue 一种特殊的TransferQueue 容器为0
